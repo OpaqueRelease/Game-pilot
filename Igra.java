@@ -95,7 +95,7 @@ static boolean[][] coloring; //keeps color of fields
 			}
 		};
 		
-		setTitle("Timnova igra");
+		setTitle("A game");
 		Container c = this.getContentPane();
 		c.add(p);
 		c.addMouseMotionListener(this);
@@ -143,7 +143,7 @@ static boolean[][] coloring; //keeps color of fields
 	}
 	
 	public void action() { //makes an action
-		if(mouseX > - 1 && mouseY > -1) { //check if we are inside the field
+		if(mouseX > - 1 && mouseY > -1 && mouseX < nFields && mouseY < nFields) { //check if we are inside the field
 			boolean Ux = mouseX > 0;
 			boolean Ox = mouseX < nFields - 1;
 			boolean Uy = mouseY > 0;

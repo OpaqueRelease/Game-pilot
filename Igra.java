@@ -105,7 +105,7 @@ static boolean[][] coloring; //keeps color of fields
 	public void mouseMoved(MouseEvent e){ //track the mouse and repaint
 		int x = e.getX() - padding;
 		x = x / (xDimension / nFields);
-		if (x < 0 || x > 10) {
+		if (x < 0 || x >= nFields) {
 			mouseX = -1;
 		}else {
 			mouseX = x;
@@ -113,7 +113,7 @@ static boolean[][] coloring; //keeps color of fields
 		
 		int y = e.getY() - padding;
 		y = y / (yDimension / nFields);
-		if (y < 0 || y > 10) {
+		if (y < 0 || y >= nFields) {
 			mouseY = -1;
 		}else {
 			mouseY = y;
